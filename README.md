@@ -13,7 +13,7 @@
 
 3. update package.json adding `"postinstall": "rn-nodeify --install --hack",` to the scripts.
 
-4. `cd XXX` and `npm install u3.js asyncstorage-down --save`.
+4. `cd XXX` and then `npm install u3.js asyncstorage-down --save` or if you just need the ecc lib for signing, `npm install u3-utils --save` 
 
 5. replace the generated file `shim.js` with the same one in the root of project.
 
