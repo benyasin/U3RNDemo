@@ -1,10 +1,9 @@
 # U3RNDemo
 
-###### a demo integrated react native with u3.js
+> a demo integrated react native with u3.js.
+> `u3.js` is default to browser and nodejs environments, but you can still integrate u3.js to react native using `rn-nodeify`.
 
-<img src="https://user-images.githubusercontent.com/1866848/50054220-b7a20f80-017a-11e9-86e5-bbaa1b8fe865.png" width="200"/>
-
-`u3.js` is default to browser and nodejs environments, but you can still integrate u3.js to react native using `rn-nodeify`.
+<img src="https://user-images.githubusercontent.com/1866848/50054220-b7a20f80-017a-11e9-86e5-bbaa1b8fe865.png" width="250"/>
 
 #### steps
 
