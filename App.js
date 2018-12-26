@@ -39,12 +39,6 @@ export default class App extends Component<Props> {
 
     let result = ecc.generateKeyPairWithMnemonic()
     console.log(result)
-
-    const keyProvider = () => {
-      return ['5JbedY3jGfNK7HcLXcqGqSYrmX2n8wQWqZAuq6K7Gcf4Dj62UfL']
-    }
-    const tr = await u3.contract('utrio.token')
-    await tr.transfer('ben', 'bob', '1.0000 UGAS', '', {keyProvider})
   }
 
   render () {

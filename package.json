@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "postinstall": "rn-nodeify --install --hack",
-    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "node --max-old-space-size=88880 node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
   "dependencies": {
@@ -33,7 +33,8 @@
     "stream-browserify": "^1.0.0",
     "timers-browserify": "^1.4.2",
     "tty-browserify": "0.0.0",
-    "u3.js": "^0.2.11",
+    "u3-utils": "^0.0.4",
+    "u3.js": "^0.2.14",
     "url": "^0.10.3",
     "util": "^0.10.4",
     "vm-browserify": "0.0.4"

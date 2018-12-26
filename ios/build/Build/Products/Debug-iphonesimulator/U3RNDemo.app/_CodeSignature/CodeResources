@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
 		<data>
-		hMZbk8a7PoavsM6iV1NyMRdDyYc=
+		9c0M82KM1DNIFPpQ3QV6ktUQXYc=
 		</data>
 		<key>Frameworks/XCTest.framework/Info.plist</key>
 		<data>
@@ -59,7 +59,7 @@
 		</data>
 		<key>PlugIns/U3RNDemoTests.xctest/U3RNDemoTests</key>
 		<data>
-		NzedCMXzOCrMfaM9w6FaxcYp7ZM=
+		B1ap3rg8Ra8xB5rA5j8lT219/a8=
 		</data>
 		<key>PlugIns/U3RNDemoTests.xctest/_CodeSignature/CodeResources</key>
 		<data>
@@ -72,11 +72,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hMZbk8a7PoavsM6iV1NyMRdDyYc=
+			9c0M82KM1DNIFPpQ3QV6ktUQXYc=
 			</data>
 			<key>hash2</key>
 			<data>
-			IuVLDpmX6r6KI+V2E9645qitgHSnLJa4XNfSebhAYiQ=
+			1EgYTyuH0AXM+GYdcj9EZr2da/UV5GmazXwbq1X7OLk=
 			</data>
 		</dict>
 		<key>Frameworks/XCTest.framework/Info.plist</key>
@@ -184,11 +184,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NzedCMXzOCrMfaM9w6FaxcYp7ZM=
+			B1ap3rg8Ra8xB5rA5j8lT219/a8=
 			</data>
 			<key>hash2</key>
 			<data>
-			duDRxYqx+5nWBZktmaCWGR+SX4Xjz0KHhVVEJ1lSN+4=
+			15C0A0UBLazaCNjZD2dW/BeYyTgW+NDb7X6XOXKTodE=
 			</data>
 		</dict>
 		<key>PlugIns/U3RNDemoTests.xctest/_CodeSignature/CodeResources</key>
