@@ -8,7 +8,7 @@
 
 import React, { Component } from 'react'
 import { Platform, StyleSheet, Text, View } from 'react-native'
-import { createU3, ecc } from 'u3.js/src'
+import { createU3, U3Utils } from 'u3.js'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -37,7 +37,7 @@ export default class App extends Component<Props> {
       })
     })
 
-    let result = ecc.generateKeyPairWithMnemonic()
+    let result = U3Utils.ecc.generateKeyPairWithMnemonic()
     console.log(result)
   }
 
