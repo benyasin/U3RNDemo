@@ -1,68 +1,40 @@
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-import { createU3, U3Utils } from 'u3.js';
+import './shim'
+import React, { Component } from 'react'
+import { StyleSheet, YellowBox, SafeAreaView, Text } from 'react-native'
+import { createU3, U3Utils } from 'u3.js'
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-export default class App extends Component {
-
+class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
+    YellowBox.ignoreWarnings(['Remote Debugger'])
+    console.disableYellowBox = true
     this.state = {
-      chainInfo: null,
-    };
+      info: null,
+    }
   }
 
-  async componentDidMount() {
-    const u3 = createU3();
-    let info = await u3.getChainInfo();
+  async UNSAFE_componentWillMount() {
+    const config = {
+      httpEndpoint: 'https://ultrainio.ultrain.info',
+      httpEndpointHistory: 'https://history-ultrainio.ultrain.info',
+      chainId: '99b1cef2acdf6c4bcbce64c6490a999b819c236b19e3cd7cd2c3accc71da30ef',
+    }
+    const u3 = createU3(config)
+    const info = await u3.getChainInfo()
     this.setState({
-      chainInfo: JSON.stringify(info),
-    });
-
-    let result = U3Utils.ecc.generateKeyPairWithMnemonic();
-
-    console.log(result);
+      info,
+    })
+    console.log(info)
   }
 
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to U3RNDemo!</Text>
-        <Text style={styles.instructions}>getChainInfo</Text>
-        <Text>{this.state.chainInfo}</Text>
-      </View>
-    );
+    return <SafeAreaView style={{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+      <Text style={{ fontSize: 20, marginBottom: 20 }}>U3集成示例：</Text>
+      <Text>
+        {JSON.stringify(this.state.info)}
+      </Text>
+    </SafeAreaView>
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-  chainInfo: {
-    marginTop: 30,
-    textAlign: 'left',
-    color: '#875643',
-    marginBottom: 5,
-    marginHorizontal: 20,
-  },
-});
+export default App
